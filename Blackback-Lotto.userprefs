@@ -1,0 +1,15 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\TextSetting.cs">
+    <Files>
+      <File FileName="Assets\Scripts\main.cs" Line="9" Column="2" />
+      <File FileName="Assets\Scripts\TextSetting.cs" Line="14" Column="27" />
+      <File FileName="Assets\Scripts\Btn_ground.cs" Line="7" Column="28" />
+      <File FileName="Assets\Scripts\win_ground.cs" Line="25" Column="36" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
