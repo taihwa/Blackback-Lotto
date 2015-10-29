@@ -4,7 +4,7 @@ using System.Collections;
 public class win_ground : MonoBehaviour {
 
 	public GameObject Target;
-	private main other;
+	private MainData MD;
 
 
 	public GameObject[] Blanks;
@@ -12,7 +12,7 @@ public class win_ground : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		Target = GameObject.Find("/Main");
-		other = Target.GetComponent<main>();
+		MD = Target.GetComponent<MainData>();
 	}
 	
 	// Update is called once per frame
@@ -22,25 +22,25 @@ public class win_ground : MonoBehaviour {
 
 	void resClickItem(int itemNumber)
 	{
+		int[] GSI = MD.getGroundStateItem ();
 		if (itemNumber > 0)
 			itemNumber--;
-		other.GroundStateItem [itemNumber] = other.GroundStateItem [itemNumber] * -1;
+		GSI [itemNumber] = GSI [itemNumber] * -1;
+		MD.setGroundStateItem (GSI);
 		transBlankState ();
 	}
 
 	void resClickBlank(int itemNumber)
 	{
-		if (itemNumber > 0)
-			itemNumber--;
-		other.GroundStateItem [itemNumber] = other.GroundStateItem [itemNumber] * -1;
-		transBlankState ();
+		resClickItem (itemNumber);
 	}
 
 	public void transBlankState()
 	{
-		for (int i=0; i<other.GroundStateItem.Length; i++) 
+		int[] GSI = MD.getGroundStateItem ();
+		for (int i=0; i<GSI.Length; i++) 
 		{
-			if(other.GroundStateItem[i] == -1) Blanks[i].gameObject.SetActive(false);
+			if(GSI[i] == -1) Blanks[i].gameObject.SetActive(false);
 			else  Blanks[i].gameObject.SetActive(true);
 		}
 	}
