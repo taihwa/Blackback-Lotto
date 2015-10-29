@@ -8,7 +8,9 @@ public class main : MonoBehaviour {
 	// Global /
 
 	public TextSetting TS;
-	//private GameObject TS;
+
+	public GUIText SpeedButtonText;
+	public GUIText PlusButtonText;
 
 	public GameObject win_ground;
 	public bool win_tog = false;
@@ -39,7 +41,6 @@ public class main : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		TS = GetComponent<TextSetting>();
-	
 	}
 	
 	// Update is called once per frame
@@ -128,7 +129,7 @@ public class main : MonoBehaviour {
 
 	void firstDisplay(){
 		timesCount++;
-		gameObject.SendMessage("setTimes", string.Format("{0,8:N0}",timesCount));
+		TS.Times.text = string.Format("{0,8:N0}",timesCount);
 		//TS.Times.text = "제 "+string.Format("{0,0:N6}",tt)+" 회 추첨";
 		
 		num1arr = getNumberArray ();
@@ -175,10 +176,12 @@ public class main : MonoBehaviour {
 
 	public void onClickSpeed(){
 		SpeedLevel += 5;
+		SpeedButtonText.text = "Speed Up ("+SpeedLevel+")";
 	}
 
 	public void onClickPlus(){
 		PlusLevel += 1;
+		PlusButtonText.text = "Money Plus ("+PlusLevel+"%)";
 	}
 
 	public void closeAllWindows(){

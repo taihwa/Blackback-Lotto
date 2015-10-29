@@ -11,37 +11,16 @@ public class TextSetting : MonoBehaviour {
 	public TextMesh DC3;
 	public TextMesh DC4;
 	public TextMesh DC5;
-	public TextMesh MoneySum;
+	public GUIText MoneySum;
 	public TextMesh GuanLevel_text;
+
+	// Use this for initialization
+	void Start () {
 	
-	void setTimes (string str) {
-		Times.text = str;
 	}
-	void setNum1 (string str) {
-		Num1.text = str;
-	}
-	void setNum2 (string str) {
-		Num2.text = str;
-	}
-	void setDC1 (string str) {
-		DC1.text = str;
-	}
-	void setDC2 (string str) {
-		DC2.text = str;
-	}
-	void setDC3 (string str) {
-		DC3.text = str;
-	}
-	void setDC4 (string str) {
-		DC4.text = str;
-	}
-	void setDC5 (string str) {
-		DC5.text = str;
-	}
-	void setMoneySum (string str) {
-		MoneySum.text = str;
-	}
-	void setGuanLevel_text (string str) {
-		GuanLevel_text.text = str;
+	
+	// Update is called once per frame
+	void Update () {
+	
 	}
 }
